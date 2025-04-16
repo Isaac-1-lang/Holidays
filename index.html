@@ -2,70 +2,199 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My First HTML Page</title>
   <style>
+    :root {
+      --primary: #4a6fa5;
+      --secondary: #166088;
+      --accent: #4fc1e9;
+      --light: #f8f9fa;
+      --dark: #343a40;
+      --shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
     body {
-      font-family: Arial, sans-serif;
-      background-color: #f2f2f2;
-      color: #333;
-      max-width: 800px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--light);
+      color: var(--dark);
+      line-height: 1.6;
+    }
+    
+    .container {
+      max-width: 1000px;
       margin: 0 auto;
-      padding: 20px;
+      padding: 0 20px;
     }
-    h1, h2 {
-      color: #0066cc;
+    
+    header {
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: white;
+      padding: 2rem 0;
+      text-align: center;
+      border-radius: 0 0 20px 20px;
+      margin-bottom: 2rem;
+      box-shadow: var(--shadow);
     }
-    img {
-      max-width: 100%;
-      border-radius: 8px;
+    
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
     }
-    nav a {
-      margin-right: 15px;
-      text-decoration: none;
-      color: #0066cc;
-    }
+    
     nav {
-      margin-bottom: 20px;
+      display: flex;
+      justify-content: center;
+      margin-top: 1rem;
     }
+    
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      margin: 0 0.5rem;
+      border-radius: 20px;
+      transition: all 0.3s ease;
+      font-weight: 500;
+    }
+    
+    nav a:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+      transform: translateY(-2px);
+    }
+    
     section {
-      margin-bottom: 30px;
+      background-color: white;
+      border-radius: 12px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: var(--shadow);
+    }
+    
+    h2 {
+      color: var(--primary);
+      margin-bottom: 1rem;
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 0.5rem;
+      display: inline-block;
+    }
+    
+    p {
+      margin-bottom: 1rem;
+    }
+    
+    .hero-image {
+      width: 100%;
+      border-radius: 8px;
+      margin: 1rem 0;
+      box-shadow: var(--shadow);
+      transition: transform 0.3s ease;
+    }
+    
+    .hero-image:hover {
+      transform: scale(1.01);
+    }
+    
+    ul {
+      list-style-position: inside;
+      margin-left: 1rem;
+    }
+    
+    li {
+      margin-bottom: 0.5rem;
+      position: relative;
+      padding-left: 1rem;
+    }
+    
+    li::before {
+      content: "•";
+      color: var(--accent);
+      font-weight: bold;
+      display: inline-block; 
+      width: 1rem;
+      margin-left: -1rem;
+    }
+    
+    a {
+      color: var(--secondary);
+      transition: color 0.3s ease;
+    }
+    
+    a:hover {
+      color: var(--accent);
+    }
+    
+    footer {
+      text-align: center;
+      padding: 1.5rem 0;
+      color: #777;
+      font-size: 0.9rem;
+    }
+    
+    @media (max-width: 768px) {
+      header {
+        padding: 1.5rem 0;
+      }
+      
+      h1 {
+        font-size: 2rem;
+      }
+      
+      section {
+        padding: 1.5rem;
+      }
     }
   </style>
 </head>
 <body>
-
-  <h1>Welcome to My First Website!</h1>
-  <nav>
-    <a href="#about">About Me</a>
-    <a href="#hobbies">Hobbies</a>
-    <a href="#contact">Contact</a>
-  </nav>
-
-  <section id="about">
-    <h2>About Me</h2>
-    <p>Hi! I'm just starting to learn HTML. This is my very first webpage. I made it using only HTML and a little CSS. I’m excited to build more things in the future!</p>
-    <img src="https://via.placeholder.com/600x300" alt="A placeholder image">
-  </section>
-
-  <section id="hobbies">
-    <h2>My Hobbies</h2>
-    <ul>
-      <li>Learning how websites work</li>
-      <li>Watching tech tutorials</li>
-      <li>Playing simple web games</li>
-      <li>Trying out new code</li>
-    </ul>
-  </section>
-
-  <section id="contact">
-    <h2>Contact Me</h2>
-    <p>You can email me at: <a href="mailto:myemail@example.com">myemail@example.com</a></p>
-  </section>
-
+  <header>
+    <div class="container">
+      <h1>Welcome to My First Website!</h1>
+      <nav>
+        <a href="#about">About Me</a>
+        <a href="#hobbies">Hobbies</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+  
+  <div class="container">
+    <section id="about">
+      <h2>About Me</h2>
+      <p>Hi! I'm just starting to learn HTML. This is my very first webpage. I made it using only HTML and CSS. I'm excited to build more things in the future!</p>
+      <img src="/api/placeholder/800/400" alt="Beautiful scenery" class="hero-image">
+      <p>I've always been fascinated by web development and the endless possibilities it offers. Being able to create something that anyone around the world can access is truly amazing!</p>
+    </section>
+    
+    <section id="hobbies">
+      <h2>My Hobbies</h2>
+      <ul>
+        <li>Learning how websites work</li>
+        <li>Watching tech tutorials</li>
+        <li>Playing simple web games</li>
+        <li>Trying out new code</li>
+        <li>Exploring web design trends</li>
+      </ul>
+    </section>
+    
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <p>I'd love to connect with fellow beginners or anyone who can provide guidance!</p>
+      <p>You can email me at: <a href="mailto:myemail@example.com">myemail@example.com</a></p>
+    </section>
+  </div>
+  
   <footer>
-    <p>&copy; 2025 My First Website. All rights reserved.</p>
+    <div class="container">
+      <p>&copy; 2025 My First Website. All rights reserved.</p>
+    </div>
   </footer>
-
 </body>
 </html>
 
