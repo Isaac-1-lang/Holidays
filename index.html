@@ -2,323 +2,70 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>HTML Elements Showcase</title>
-<style>
-<!-- Variables in css -->
-    :root {
-      --primary: #2e8b57;
-      --accent: #4db6ac;
-      --bg: #f5f7fa;
-      --text: #333;
-      --card-bg: #ffffff;
-      --border: #ddd;
-    }
-
+  <title>My First HTML Page</title>
+  <style>
     body {
-      margin: 0;
-      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      background-color: var(--bg);
-      color: var(--text);
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      color: #333;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
     }
-
-    header, footer {
-      background-color: var(--primary);
-      color: white;
-      padding: 1rem 2rem;
-      text-align: center;
+    h1, h2 {
+      color: #0066cc;
     }
-
-    nav {
-      background-color: var(--accent);
-      padding: 0.75rem 2rem;
-      text-align: center;
-    }
-
-    nav a {
-      color: white;
-      margin: 0 1rem;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    main {
-      padding: 2rem;
-      max-width: 1100px;
-      margin: auto;
-    }
-
-    section {
-      background-color: var(--card-bg);
-      padding: 1.5rem;
-      margin-bottom: 2rem;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-    }
-
-    h1, h2, h3 {
-      color: var(--primary);
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 1rem;
-    }
-
-    th, td {
-      border: 1px solid var(--border);
-      padding: 0.75rem;
-      text-align: left;
-    }
-
-    th {
-      background-color: var(--accent);
-      color: white;
-    }
-
-    input, select, textarea, button {
-      padding: 0.5rem;
-      margin-top: 0.3rem;
-      margin-bottom: 1rem;
-      width: 100%;
-      border: 1px solid var(--border);
-      border-radius: 5px;
-      box-sizing: border-box;
-      font-size: 1rem;
-    }
-
-    input[type="radio"], input[type="checkbox"] {
-      width: auto;
-      margin-right: 0.5rem;
-    }
-
-    button, input[type="submit"] {
-      background-color: var(--primary);
-      color: white;
-      border: none;
-      cursor: pointer;
-      transition: background 0.3s ease;
-    }
-
-    button:hover, input[type="submit"]:hover {
-      background-color: #256d46;
-    }
-
     img {
-      border-radius: 8px;
       max-width: 100%;
-    }
-
-    iframe, video {
-      width: 100%;
-      border: none;
-      border-radius: 8px;
-      margin-top: 1rem;
-    }
-
-    code {
-      background: #e0e0e0;
-      padding: 0.2rem 0.4rem;
-      border-radius: 4px;
-      font-family: monospace;
-    }
-
-    details {
-      background-color: #eef3f7;
-      padding: 0.75rem;
-      border-radius: 5px;
-      margin-top: 1rem;
-    }
-
-    progress, meter {
-      width: 100%;
-      height: 20px;
-      margin-top: 0.5rem;
-    }
-
-    aside {
-      background-color: #fef6e4;
-      padding: 1rem;
-      border-left: 5px solid #ffcc00;
-      margin-top: 1rem;
       border-radius: 8px;
     }
-
-    footer p {
-      margin: 0;
+    nav a {
+      margin-right: 15px;
+      text-decoration: none;
+      color: #0066cc;
     }
-
-    @media (max-width: 600px) {
-      nav a {
-        display: block;
-        margin: 0.5rem 0;
-      }
-
-      input, select, textarea {
-        width: 100%;
-      }
+    nav {
+      margin-bottom: 20px;
+    }
+    section {
+      margin-bottom: 30px;
     }
   </style>
 </head>
 <body>
 
-<header>
-  <h1>HTML Elements Showcase</h1>
-</header>
+  <h1>Welcome to My First Website!</h1>
+  <nav>
+    <a href="#about">About Me</a>
+    <a href="#hobbies">Hobbies</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
-<nav>
-<!-- Navigation menu -->
-  <a href="#text">Text</a> 
-  <a href="#lists">Lists</a> 
-  <a href="#forms">Forms</a> 
-  <a href="#tables">Tables</a> 
-  <a href="#media">Media</a> 
-  <a href="#others">Others</a>
-</nav>
+  <section id="about">
+    <h2>About Me</h2>
+    <p>Hi! I'm just starting to learn HTML. This is my very first webpage. I made it using only HTML and a little CSS. I’m excited to build more things in the future!</p>
+    <img src="https://via.placeholder.com/600x300" alt="A placeholder image">
+  </section>
 
-<main>
+  <section id="hobbies">
+    <h2>My Hobbies</h2>
+    <ul>
+      <li>Learning how websites work</li>
+      <li>Watching tech tutorials</li>
+      <li>Playing simple web games</li>
+      <li>Trying out new code</li>
+    </ul>
+  </section>
 
-<section id="text">
-  <h2>Text & Headings</h2>
-  <h1>Heading 1</h1>
-  <h2>Heading 2</h2>
-  <h3>Heading 3</h3>
-  <h4>Heading 4</h4>
-  <h5>Heading 5</h5>
-  <h6>Heading 6</h6>
-  <p>This is a <strong>paragraph</strong> with <em>emphasis</em>, <u>underline</u>, and <mark>highlighted</mark> text.</p>
-  <p>Line break<br>here. Horizontal rule below:</p>
-  <hr>
-  <p>This is <code>inline code</code> and a <abbr title="HyperText Markup Language">HTML</abbr> abbreviation.</p>
-</section>
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p>You can email me at: <a href="mailto:myemail@example.com">myemail@example.com</a></p>
+  </section>
 
-<section id="lists">
-  <h2>Lists</h2>
-  <h3>Unordered List</h3>
-  <ul>
-    <li>Apples</li>
-    <li>Oranges</li>
-    <li>Bananas</li>
-  </ul>
-  <h3>Ordered List</h3>
-  <ol>
-    <li>Wake up</li>
-    <li>Eat breakfast</li>
-    <li>Code!</li>
-  </ol>
-  <h3>Definition List</h3>
-  <dl>
-    <dt>HTML</dt>
-    <dd>HyperText Markup Language</dd>
-    <dt>CSS</dt>
-    <dd>Cascading Style Sheets</dd>
-  </dl>
-</section>
-
-<section id="forms">
-  <h2>Forms</h2>
-  <form>
-    <label for="text">Text:</label>
-    <input type="text" id="text"><br><br>
-
-    <label for="email">Email:</label>
-    <input type="email" id="email"><br><br>
-
-    <label for="password">Password:</label>
-    <input type="password" id="password"><br><br>
-
-    <label for="date">Date:</label>
-    <input type="date" id="date"><br><br>
-
-    <label>Gender:</label>
-    <input type="radio" name="gender" value="male"> Male
-    <input type="radio" name="gender" value="female"> Female<br><br>
-
-    <label>Hobbies:</label>
-    <input type="checkbox" value="coding"> Coding
-    <input type="checkbox" value="reading"> Reading<br><br>
-
-    <label for="country">Country:</label>
-    <select id="country">
-      <option>Rwanda</option>
-      <option>Kenya</option>
-      <option>USA</option>
-    </select><br><br>
-
-    <label for="msg">Message:</label><br>
-    <textarea id="msg" rows="4" cols="30"></textarea><br><br>
-
-    <input type="submit" value="Submit">
-    <button type="button">Click Me</button>
-  </form>
-</section>
-
-<section id="tables">
-  <h2>Table</h2>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Profession</th>
-        <th>Country</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Alice</td>
-        <td>Engineer</td>
-        <td>Canada</td>
-      </tr>
-      <tr>
-        <td>Bob</td>
-        <td>Doctor</td>
-        <td>USA</td>
-      </tr>
-    </tbody>
-  </table>
-</section>
-
-<section id="media">
-  <h2>Media</h2>
-  <img src="https://via.placeholder.com/150" alt="Placeholder Image"><br><br>
-  <audio controls>
-    <source src="sample.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
-  </audio><br><br>
-  <video width="320" height="240" controls>
-    <source src="sample.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video><br><br>
-  <iframe src="https://example.com" width="300" height="200" title="Iframe Example"></iframe>
-</section>
-
-<section id="others">
-  <h2>Other Common Tags</h2>
-  <article>
-    <h3>Article Example</h3>
-    <p>This is an article section.</p>
-  </article>
-
-  <aside>
-    <h4>Aside Content</h4>
-    <p>This could be related links or notes.</p>
-  </aside>
-
-  <details>
-    <summary>Click to expand</summary>
-    <p>Hidden content revealed!</p>
-  </details>
-
-  <progress value="70" max="100"></progress>
-  <meter value="0.6">60%</meter>
-</section>
-
-</main>
-
-<footer>
-  <p>&copy; 2025 All rights reserved.</p>
-</footer>
+  <footer>
+    <p>&copy; 2025 My First Website. All rights reserved.</p>
+  </footer>
 
 </body>
 </html>
+
